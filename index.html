@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIONEA – Shop Coming Soon</title>
+  <meta name="description" content="Mystische Mode mit Stil. AIONEA – Dein Store für außergewöhnliche Designs. Launch am 01.03.2026. Jetzt anmelden und 10 % Rabatt sichern." />
+  <link rel="icon" href="AIONEA-LOGO_Print_Transparent.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('background.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 0;
+    }
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      max-width: 640px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    img.logo {
+      max-width: 340px;
+      opacity: 0;
+      animation: fadeZoom 1.5s ease forwards;
+    }
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .animated-text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+      font-size: 2.5em;
+    }
+
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(-60px);
+      animation: slideIn 0.6s ease forwards, bounce 1.8s ease-in-out infinite;
+    }
+    .letter.space {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .letter:nth-child(n) {
+      animation-delay: calc(0.1s * var(--i)), calc(1.5s + 0.1s * var(--i));
+    }
+
+    #countdown {
+      font-size: 1.6em;
+      font-weight: 500;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    input[type="email"] {
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      width: 100%;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+    }
+    button {
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .thank-you {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 1em;
+      animation: fadeIn 1s ease forwards;
+      display: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .instagram-follow {
+      font-size: 1.4em;
+      margin: 50px auto 30px;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 40px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .instagram-follow a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .instagram-follow i {
+      font-size: 1.6em;
+    }
+
+    .instagram-follow a:hover {
+      color: #ff69b4;
+      text-shadow: 0 0 8px #ff69b4;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .animated-text { font-size: 1.8em; }
+      img.logo { max-width: 240px; }
+      #countdown { font-size: 1.2em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="AIONEA-LOGO_Print_Transparent.png" alt="AIONEA Logo" class="logo" />
+
+    <div class="animated-text">
+      <span class="letter" style="--i:1">S</span>
+      <span class="letter" style="--i:2">H</span>
+      <span class="letter" style="--i:3">O</span>
+      <span class="letter" style="--i:4">P</span>
+      <span class="letter space"> </span>
+      <span class="letter" style="--i:5">C</span>
+      <span class="letter" style="--i:6">O</span>
+      <span class="letter" style="--i:7">M</span>
+      <span class="letter" style="--i:8">I</span>
+      <span class="letter" style="--i:9">N</span>
+      <span class="letter" style="--i:10">G</span>
+      <span class="letter space"> </span>
+      <span class="letter" style="--i:11">S</span>
+      <span class="letter" style="--i:12">O</span>
+      <span class="letter" style="--i:13">O</span>
+      <span class="letter" style="--i:14">N</span>
+    </div>
+
+    <div id="countdown"></div>
+
+    <form onsubmit="newsletter(event)">
+      <input type="email" id="email" placeholder="E‑Mail für 10 % Rabatt bei Launch" required />
+      <button type="submit">Anmelden & Rabatt sichern</button>
+    </form>
+
+    <div id="thankYou" class="thank-you">
+      <p><strong>Danke für deine Anmeldung!</strong><br>
+      Du wirst beim Launch informiert und erhältst exklusive Einblicke in neue Kollektionen.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="instagram-follow">
+      <a href="https://instagram.com/aionea_official" target="_blank">
+        <i class="fab fa-instagram"></i>
+        Folge uns auf <strong>@aionea_official</strong>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const launch = new Date('2026-03-01T00:00:00');
+    function updateCountdown() {
+      const el = document.getElementById("countdown");
+      if (!el) return;
+      const now = new Date();
+      const diff = launch - now;
+      if (diff <= 0) {
+        el.innerText = "Jetzt live!";
+        return;
+      }
+      const d = Math.floor(diff / 86400000),
+            h = Math.floor(diff % 86400000 / 3600000),
+            m = Math.floor(diff % 3600000 / 60000),
+            s = Math.floor(diff % 60000 / 1000);
+      el.innerText = `Noch ${d} Tage, ${h}h ${m}m ${s}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    function newsletter(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById("email");
+      const thankYou = document.getElementById("thankYou");
+
+      if (emailInput && thankYou) {
+        emailInput.value = "";
+        thankYou.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
